@@ -15,4 +15,12 @@ c.execute(sql, query_id)
 print "query database: %s seconds ---" % (time.time() - start_time)
 re = c.fetchall()
 print "Latest batch:",re
+
+sql='select * from pairwise_infos where ended=1 order by update_id desc limit 1'
+query_id = []
+start_time = time.time()
+c.execute(sql, query_id)
+print "query database: %s seconds ---" % (time.time() - start_time)
+re = c.fetchall()
+print "Latest ended batch:",re
 db.close()

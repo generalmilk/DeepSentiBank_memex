@@ -102,7 +102,7 @@ if (empty($neardup_type)) {
 }
 
 if (empty($nocache)) {
-  $nocache = 0;
+  $nocache = 1;
 }
 if (empty($noblur)) {
   $noblur = 0;

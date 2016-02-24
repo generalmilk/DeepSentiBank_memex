@@ -1,5 +1,5 @@
 #!/bin/bash
-nb_workers=8
+nb_workers=24
 sleep_time=10
 batch_size=1000
 
