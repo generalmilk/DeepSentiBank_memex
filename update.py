@@ -27,5 +27,5 @@ while 1:
         	print "Process "+cmdline+" exists!"
 	else:
 		print "Launching incremental update."
-		os.system('python incUp.py -l 200000 >> logUpdate'+datetime.date.today().isoformat()+'.txt')
+		os.system('python incUp.py -l 200000 >> update/logs/logUpdate'+datetime.date.today().isoformat()+'.txt')
 

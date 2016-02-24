@@ -14,6 +14,7 @@ localhost=global_var['local_db_host']
 localuser=global_var['local_db_user']
 localpwd=global_var['local_db_pwd']
 localdb=global_var['local_db_dbname']
+nb_dl_workers=4
 
 def download_shell(args):
 	url = args[0]
@@ -187,7 +188,7 @@ if __name__ == '__main__':
 	flog.write('Time for getting urls: '+ str(step_times[-1]-step_times[-2])+ ' seconds\n')
 
 	# download images
-	pool = multiprocessing.Pool(10)
+	pool = multiprocessing.Pool(nb_dl_workers)
 	download_arg=[];
 	if not os.path.isdir(os.path.join(update_image_cache,str(startid))):
 		os.mkdir(os.path.join(update_image_cache,str(startid)))
